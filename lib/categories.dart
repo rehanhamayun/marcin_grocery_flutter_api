@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:sizer/sizer.dart';
+import 'package:marcin_grocery/widgets.dart';
+
+///API
+/// https://fruityvice.com//api/fruit/all
 
 class Categories extends StatelessWidget {
   const Categories({Key? key}) : super(key: key);
@@ -7,7 +10,7 @@ class Categories extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 200,
+      height: 240,
       width: double.infinity,
       // color: Colors.red,
       child: ListView(
@@ -24,8 +27,8 @@ class Categories extends StatelessWidget {
                   ),
                   elevation: 0.0,
                   child: Container(
-                    height: 180,
-                    width: 150,
+                    height: 200,
+                    width: 180,
                   ),
                 ),
               ),
@@ -42,8 +45,31 @@ class Categories extends StatelessWidget {
                   ),
                   elevation: 0.0,
                   child: Container(
-                    height: 180,
-                    width: 150,
+                    height: 200,
+                    width: 180,
+                    child: Column(
+                      children: [
+                        Image.network(
+                          fruitImg,
+                          height: 90,
+                          width: 90,
+                        ),
+                        const SizedBox(
+                          height: 10,
+                        ),
+                        Text(
+                          "Fruits &\nvegetables",
+                          style: titleText,
+                        ),
+                        const SizedBox(
+                          height: 8,
+                        ),
+                        Text(
+                          "Fresh fruits everyday",
+                          style: highlightText,
+                        )
+                      ],
+                    ),
                   ),
                 ),
               ),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:marcin_grocery/categories.dart';
 import 'package:marcin_grocery/home_page.dart';
 
 void main() {
@@ -27,6 +28,11 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       home: const Homepage(),
+      routes: <String, WidgetBuilder>{
+        '/a': (BuildContext context) => Homepage(),
+        '/b': (BuildContext context) => Categories(),
+        '/c': (BuildContext context) => Categories(),
+      },
     );
   }
 }
